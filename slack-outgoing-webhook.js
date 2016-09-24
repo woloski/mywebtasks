@@ -3,7 +3,6 @@
 // that trigger word will be sent
 
 module.exports = function (context, done) {
-  
   if (context.secrets.WEBHOOK_SECRET !== context.data.token) {
     return done(new Error('nope'));
   }
